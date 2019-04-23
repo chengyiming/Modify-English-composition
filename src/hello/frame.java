@@ -316,7 +316,8 @@ public class frame extends JFrame { // 创建类，继承Jframe类
 		else {
 			System.out.println("您输入的英文文章不符合文法！请检查。");
 		}
-        String new_content=new String(filecontent, encoding).replaceAll(regex, replace_chose_word);//文档中的内容
+        String new_content=new String(filecontent, encoding).replaceAll(regex, replace_chose_word);
+        //文档中的内容
         
         //开始进行写入
         FileWriter writer = new FileWriter(article_path, false); //false表示覆盖之前的，重新写入

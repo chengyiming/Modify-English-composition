@@ -126,7 +126,7 @@ public class judge {
 		//逐个单词进行判断
 		
 		//长度是len，不能使用循环艾玛，一次全部出来了，此时index=0
-		while(dict.get(all_words_list[index])!=null) {
+		while(dict.get(all_words_list[index].toLowerCase())!=null||all_words_list[index].length()==0) {
 			index++;
 //			System.out.println("index:"+index);
 			if(index<len);
@@ -138,7 +138,7 @@ public class judge {
 		}
 			
 		System.out.println("前index:"+index);
-		if(dict.get(all_words_list[index])==null)	
+		if(dict.get(all_words_list[index].toLowerCase())==null)	
 		{//弹出窗口，进行处理
 			if(index!=len) {
 				wrong_word=all_words_list[index];
